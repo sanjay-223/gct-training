@@ -14,7 +14,7 @@ object SQLContextExample extends App {
 
   val sqlContext:SQLContext = spark.sqlContext
 
-  //read csv with options
+  //read csv with options Commenting to trigger build
   val df = sqlContext.read.options(Map("inferSchema"->"true","delimiter"->",","header"->"true"))
     .csv("src/main/resources/zipcodes.csv")
   df.show()
